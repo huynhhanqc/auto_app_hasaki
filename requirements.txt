@@ -1,0 +1,19 @@
+#pip3 install -r requirements.txt
+Appium-Python-Client==4.5.1
+python-dotenv==1.0.1
+requests==2.32.3
+selenium==4.29.0
+webdriver-manager==4.0.2
+pytest==8.3.4
+mysql-connector-python==9.2.0
+pytest-html==4.1.1
+pytest-xdist==3.6.1
+pandas==2.2.3
+
+
+# CLI INSTALLATION XCODE
+#1:  cd /Users/mac/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent
+
+#2:  open WebDriverAgent.xcodeproj
+
+#/Users/mac/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent

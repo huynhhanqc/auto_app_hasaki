@@ -1,0 +1,16 @@
+{
+  "platformName": "iOS",
+  "appium:platformVersion": "18.3",
+  "deviceName": "Mập",
+  "udid": "00008020-000B28AC1488003A",
+  "automationName": "XCUITest",
+  "bundleId": "hasaki.vn",
+  "xcodeSigningId": "iPhone Developer",
+  "language": "en",
+  "locale": "US",
+  "noReset": true,
+  "fullReset": false,
+  "wdaStartupRetries": 3,
+  "wdaStartupRetryInterval": 10000,
+  "appium:howXcodeLog": true
+}

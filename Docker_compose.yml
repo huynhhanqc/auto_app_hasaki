@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  test_automation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    command: make test
