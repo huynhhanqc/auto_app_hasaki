@@ -4,11 +4,11 @@ PYTEST := $(PYTHON) -m pytest
 
 debug:
 	@echo "🚀 Running test debug..."
-	@$(PYTEST) --log-cli-level=DEBUG --tb=auto -k "TestOrderCOD" -s 
+	@$(PYTEST) --log-cli-level=DEBUG --tb=auto -k "test_order_visa_001" -s 
 
 test:
 	@echo "🚀 Running test debug..."
-	@$(PYTEST) --log-cli-level=DEBUG --tb=auto -k "test_login_success" -s
+	@$(PYTEST) -k "TestOrderAtm" -v
 
 cd_source_xCode:
 	@echo "cd_source_xCode"

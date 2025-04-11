@@ -1,4 +1,3 @@
-import pytest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import logging
@@ -9,7 +8,7 @@ from selenium.webdriver.common.actions import interaction
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 
 
-class ActionElement:
+class BasePage:
     def __init__(self, driver ):
         self.driver = driver
 
@@ -40,6 +39,16 @@ class ActionElement:
             logging.error(f"An error occurred while sending keys to the element: {e}")
             raise
 
+    def clear_element(self, locator):
+        try:
+            element = WebDriverWait(self.driver, 30).until(
+                EC.visibility_of_element_located(locator)
+            )
+            element.clear()
+        except (TimeoutException, NoSuchElementException, ElementNotVisibleException) as e:
+            logging.error(f"An error occurred while clearing the element: {e}")
+            raise
+
     def scroll_to_element(self, locator):
         try:
             self.driver.execute_script("arguments[0].scrollIntoView(true);", locator)
@@ -65,6 +74,16 @@ class ActionElement:
             return element.get_attribute(attribute)
         except (TimeoutException, NoSuchElementException, ElementNotVisibleException) as e:
             logging.error(f"An error occurred while getting attribute from the element: {e}")
+            raise
+        
+    def get_options(self, locator):
+        try:
+            elements = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_all_elements_located(locator)
+            )
+            return elements
+        except (TimeoutException, NoSuchElementException, ElementNotVisibleException) as e:
+            logging.error(f"An error occurred while getting the options: {e}")
             raise
 
     def scroll_up(self):

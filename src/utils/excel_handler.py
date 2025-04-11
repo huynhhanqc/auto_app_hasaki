@@ -30,6 +30,7 @@ class ExcelHandler:
             df = pd.read_excel(self.file_path)
             if 'Status' not in df.columns:
                 df['Status'] = ""
+            df['TC_ID'] = df['TC_ID'].astype(str).str.strip()
             df['Status'] = df['Status'].fillna("")
             df['Status'] = df['Status'].astype(str)
             if tc_id not in df['TC_ID'].values:

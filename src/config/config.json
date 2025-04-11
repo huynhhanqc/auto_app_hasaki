@@ -1,16 +1,13 @@
 {
-  "platformName": "iOS",
-  "appium:platformVersion": "18.3",
-  "deviceName": "Mập",
-  "udid": "00008020-000B28AC1488003A",
-  "automationName": "XCUITest",
-  "bundleId": "hasaki.vn",
-  "xcodeSigningId": "iPhone Developer",
-  "language": "en",
-  "locale": "US",
-  "noReset": true,
-  "fullReset": false,
-  "wdaStartupRetries": 3,
-  "wdaStartupRetryInterval": 10000,
-  "appium:howXcodeLog": true
+  "platformName": "Android",
+  "appium:deviceName": "Pixel 3a",
+  "appium:udid": "emulator-5554",
+  "appium:platformVersion": "12.0",
+  "appium:automationName": "UiAutomator2",
+  "appium:app": "/Users/mac/Documents/vn.hasaki.buyer-v2.2.85(203)-debug.apk",
+  "appium:appPackage": "vn.hasaki.buyer",
+  "appium:appActivity": "vn.hasaki.buyer.module.main.view.MainActivity",
+  "appium:noReset": false,
+  "appium:fullReset": false,
+  "appium:unicodeKeyboard": true
 }
